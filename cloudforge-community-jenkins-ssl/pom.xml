@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <version>1.1.0</version>
+  <parent>
+    <groupId>com.cloudforgeci</groupId>
+    <artifactId>cloudforge-community</artifactId>
+    <version>1.1.0</version>
+  </parent>
+  <artifactId>cloudforge-community-jenkins-fargate-ssl</artifactId>
+  <packaging>jar</packaging>
+  <name>CloudForge Community: Jenkins Fargate + EFS + ECS + Domain + SSL</name>
+  <description>Deploy Jenkins on Fargate with Elastic File Service in Elastic Container Service behind an Application Load Balancer behind a domain and ssl</description>
+
+  <properties>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+    <build.plugins.maven-deploy-plugin.version>3.4.2</build.plugins.maven-deploy-plugin.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.cloudforgeci</groupId>
+      <artifactId>cloudforge-api</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.cloudforgeci</groupId>
+      <artifactId>cloudforge-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>software.amazon.awscdk</groupId>
+      <artifactId>aws-cdk-lib</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>software.constructs</groupId>
+      <artifactId>constructs</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <version>1.1.0</version>
+  <parent>
+    <groupId>com.cloudforgeci</groupId>
+    <artifactId>cloudforge-community</artifactId>
+    <version>1.1.0</version>
+  </parent>
+  <artifactId>cloudforge-community-jenkins-ec2-ssl</artifactId>
+  <packaging>jar</packaging>
+  <name>CloudForge Community: Jenkins EC2 + Domain + SSL</name>
+
+  <properties>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+    <build.plugins.plugin.version>3.4.2</build.plugins.plugin.version>
+  </properties>
+
+  <scm>
+    <connection>scm:git:https://github.com/CloudForgeCI/cfc-public-jenkins-domain-ssl.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/CloudForgeCI/cfc-public-jenkins-domain-ssl.git</developerConnection>
+    <url>https://maven.pkg.github.com/CloudForgeCI/cfc-public-jenkins-domain-ssl</url>
+  </scm>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>com.cloudforgeci</groupId>
+      <artifactId>cloudforge-api</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.cloudforgeci</groupId>
+      <artifactId>cloudforge-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>software.amazon.awscdk</groupId>
+      <artifactId>aws-cdk-lib</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>software.constructs</groupId>
+      <artifactId>constructs</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+</project>
