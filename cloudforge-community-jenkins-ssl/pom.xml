@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <version>1.1.1</version>
+  <version>1.1.3</version>
   <parent>
     <groupId>com.cloudforgeci</groupId>
     <artifactId>cloudforge-community</artifactId>
-    <version>1.1.1</version>
+    <version>1.1.3</version>
   </parent>
   <artifactId>cloudforge-community-jenkins-fargate-ssl</artifactId>
   <packaging>jar</packaging>
@@ -21,12 +21,12 @@
     <dependency>
       <groupId>com.cloudforgeci</groupId>
       <artifactId>cloudforge-api</artifactId>
-      <version>${project.version}</version>
+      <version>${cloudforge-core.version}</version>
     </dependency>
     <dependency>
       <groupId>com.cloudforgeci</groupId>
       <artifactId>cloudforge-core</artifactId>
-      <version>${project.version}</version>
+      <version>${cloudforge-core.version}</version>
     </dependency>
     <dependency>
       <groupId>software.amazon.awscdk</groupId>
@@ -35,6 +35,11 @@
     <dependency>
       <groupId>software.constructs</groupId>
       <artifactId>constructs</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
