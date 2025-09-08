@@ -14,6 +14,6 @@ public class JenkinsEc2DomainSslStack extends Stack {
         String zone = (String) getNode().tryGetContext("domainZone");
         String name = (String) getNode().tryGetContext("domainName");
         JenkinsConfig cfg = new JenkinsConfig(id, true, zone == null ? "example.com" : zone, name == null ? "jenkins.example.com" : name, props);
-        JenkinsEc2Builder.create(this, id, cfg);
+        JenkinsEc2Builder.create(this, id, cfg, null);
     }
 }

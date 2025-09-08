@@ -13,6 +13,6 @@ public class JenkinsEc2Stack extends Stack {
     public JenkinsEc2Stack(final Construct scope, final String id, final StackProps props) {
         super(scope, id, props);
         JenkinsConfig cfg = new JenkinsConfig(id, false, null, null, props);
-        JenkinsEc2Builder.create(this, id, cfg);
+        JenkinsEc2Builder.create(this, id, cfg, null);
     }
 }

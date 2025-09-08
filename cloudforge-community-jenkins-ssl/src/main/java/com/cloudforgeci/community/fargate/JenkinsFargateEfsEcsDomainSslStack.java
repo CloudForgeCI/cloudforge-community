@@ -12,11 +12,14 @@ public class JenkinsFargateEfsEcsDomainSslStack extends Stack {
     public JenkinsFargateEfsEcsDomainSslStack(final Construct scope, final String id, final StackProps props) {
         super(scope, id, props);
         DeploymentContext ctx = DeploymentContext.from(scope);
+        if(props.getEnv() == null) {
+
+        }
 
         String zone = (String) getNode().tryGetContext("domainZone");
         String name = (String) getNode().tryGetContext("domainName");
         JenkinsConfig cfg = new JenkinsConfig(id, true, zone == null ? "example.com" : zone, name == null ? "jenkins.example.com" : name, props);
-        JenkinsFargateEfsEcsBuilder.create(scope, id, cfg, ctx);
+        JenkinsFargateEfsEcsBuilder.create(this, id, cfg, ctx);
     }
 
 }
