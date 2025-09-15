@@ -1,8 +1,8 @@
 package com.cloudforgeci.community.fargate;
 
-import com.cloudforgeci.community.core.jenkins.JenkinsFargateEfsEcsBuilder;
-import com.cloudforgeci.core.api.DeploymentContext;
-import com.cloudforgeci.core.api.JenkinsConfig;
+import com.cloudforgeci.api.api.JenkinsConfig;
+import com.cloudforgeci.api.core.DeploymentContext;
+import com.cloudforgeci.community.compute.jenkins.JenkinsFargateEfsEcsBuilder;
 import software.amazon.awscdk.Stack;
 import software.amazon.awscdk.StackProps;
 import software.constructs.Construct;

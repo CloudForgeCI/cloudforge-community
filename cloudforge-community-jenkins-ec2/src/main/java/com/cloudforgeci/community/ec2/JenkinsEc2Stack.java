@@ -1,9 +1,8 @@
 package com.cloudforgeci.community.ec2;
 
-import com.cloudforgeci.community.core.jenkins.JenkinsEc2Builder;
-import com.cloudforgeci.core.api.JenkinsConfig;
 
-
+import com.cloudforgeci.api.api.JenkinsConfig;
+import com.cloudforgeci.community.compute.jenkins.JenkinsEc2Builder;
 import software.amazon.awscdk.Stack;
 import software.amazon.awscdk.StackProps;
 import software.constructs.Construct;
